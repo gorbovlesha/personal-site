@@ -1,0 +1,19 @@
+{
+  "repository": "gorbovlesha/personal-site",
+  "base_branch": "main",
+  "board_id": "ari:cloud:trello::board/workspace/60cd46fcc5cbc205d26e948c/65a005a1a95ebeed7ee254f5",
+  "lists": {
+    "backlog": "ari:cloud:trello::list/workspace/60cd46fcc5cbc205d26e948c/6af42483136e0121219fcc96",
+    "ready": "ari:cloud:trello::list/workspace/60cd46fcc5cbc205d26e948c/6af4248546bf3a8da56f3cf1",
+    "in_progress": "ari:cloud:trello::list/workspace/60cd46fcc5cbc205d26e948c/6af424876c0a1fc872f4b694",
+    "testing": "ari:cloud:trello::list/workspace/60cd46fcc5cbc205d26e948c/6af4248918e55f9dbcfa89f3",
+    "done": "ari:cloud:trello::list/workspace/60cd46fcc5cbc205d26e948c/6af4248a9138ae720be96261"
+  },
+  "role_timeout_seconds": 1200,
+  "bridge_timeout_seconds": 240,
+  "max_development_attempts": 3,
+  "required_ci_checks": [
+    "validate"
+  ],
+  "model": ""
+}

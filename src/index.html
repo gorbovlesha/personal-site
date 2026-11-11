@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Личное пространство в интернете: проекты, заметки и то, что вдохновляет.">
+    <meta name="theme-color" content="#f4f3ed">
+    <title>Личное пространство — персональный сайт</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23c7ed78'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='48'%3E✳%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="content.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">К содержимому</a>
+    <header class="header wrap"><a class="wordmark" href="#" aria-label="На главную"><span class="mark">✳</span> личное пространство<span class="wordmark-dot">.</span></a>
+      <nav aria-label="Основная навигация"><a href="#about">Обо мне</a><a href="#projects">Проекты</a><a href="#notes">Заметки</a><a class="nav-contact" href="#contact">На связи <span>↗</span></a>
+      </nav>
+    </header>
+    <main id="main" class="wrap">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> МОЙ УГОЛОК ИНТЕРНЕТА <span class="edition">/ VOL. 01</span>
+          </div>
+          <h1 id="hero-heading">Привет.<br>Я <span id="hero-name">Саша</span><span class="green-dot">.</span>
+          </h1>
+          <p class="hero-description" id="hero-description">Делаю штуки в интернете, разбираюсь в новом и собираю впечатления за пределами экрана.</p><a class="button" href="#projects">Посмотреть, что я делаю <span>↘</span></a>
+          <div class="hero-footnote"><span>Немного работы. Немного жизни.</span><span>Много любопытства.</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Абстрактная иллюстрация: орбиты идей">
+          <div class="art-grid"></div>
+          <div class="art-caption">IDEAS IN ORBIT <span>↗</span>
+          </div>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+          <div class="planet"><span>✳</span>
+          </div><span class="satellite satellite-one"></span><span class="satellite satellite-two"></span><span class="art-label label-one">создавать</span><span class="art-label label-two">исследовать</span>
+          <div class="art-bottom"><span>В процессе становления</span><span>∞</span>
+          </div><span class="sticker">Всегда<br>есть идея ↗</span>
+        </div>
+      </section>
+      <div class="demo-banner"><span>ПРОТОТИП</span> Имя, истории и проекты ниже — примеры для знакомства с дизайном.</div>
+      <section id="about" class="about section">
+        <div class="section-marker"><span>01 / ОБО МНЕ</span><span>Человек за экраном</span>
+        </div>
+        <div class="about-grid">
+          <h2>Люблю, когда<br>из «а что, если»<br>получается <em>что-то.</em>
+          </h2>
+          <div class="about-copy">
+            <p id="about-text">Мне интересно, как устроены вещи: от небольших приложений до городов, в которых мы живём. Лучший способ разобраться для меня — попробовать сделать самому.</p>
+            <p>Этот сайт — открытая записная книжка. Здесь будут проекты, находки и мысли, которые хочется сохранить и которыми хочется поделиться.</p>
+            <div class="tags" id="interests"></div>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <div>
+            <div class="section-marker">02 / СДЕЛАНО И В ПРОЦЕССЕ</div>
+            <h2>Маленькие идеи.<br>Настоящие проекты.</h2>
+          </div><span class="aside-label">Выбранное / 01—03</span>
+        </div>
+        <div class="projects" id="project-list"></div>
+      </section>
+      <section class="now section">
+        <div>
+          <div class="section-marker">03 / СЕЙЧАС</div>
+          <h2>В этой главе жизни</h2>
+          <p class="muted">Небольшой срез того, чем занят мой внутренний мир.</p>
+        </div>
+        <div class="now-list" id="now-list"></div>
+      </section>
+      <section id="notes" class="section">
+        <div class="section-heading">
+          <div>
+            <div class="section-marker">04 / ЗАПИСНАЯ КНИЖКА</div>
+            <h2>Мысли на полях</h2>
+          </div><span class="aside-label">Без строгого расписания</span>
+        </div>
+        <div id="note-list" class="note-list"></div>
+      </section>
+      <section id="contact" class="contact">
+        <div>
+          <div class="section-marker">05 / ПРОДОЛЖИМ РАЗГОВОР</div>
+          <h2>Хорошие вещи<br>начинаются с <em>«привет».</em>
+          </h2>
+          <p>Обсудить идею, сделать что-то вместе<br>или просто обменяться находками.</p>
+        </div>
+        <div class="contact-actions" id="contact-actions">
+          <div class="contact-placeholder">Здесь будут ваши контакты <span>↗</span><small>Почта, Telegram или GitHub</small>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="wrap footer"><a class="wordmark" href="#"><span class="mark">✳</span> Будь любопытным.</a><span>Сделано с вниманием к мелочам · <span id="year"></span></span><a href="#">Наверх ↑</a>
+    </footer>
+    <dialog id="detail-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-header"><span id="dialog-label" class="section-marker"></span><button id="close-dialog" class="close-dialog" aria-label="Закрыть">×</button>
+      </div>
+      <h2 id="dialog-title"></h2>
+      <div id="dialog-body"></div><a id="dialog-link" class="button" hidden>Открыть проект ↗</a>
+    </dialog>
+  </body>
+</html>

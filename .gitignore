@@ -1,0 +1,17 @@
+# Generated site and local configuration
+/dist/
+.env
+.env.*
+!.env.example
+
+# Python and editor state
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Agent state, worktrees and logs
+/.local/
