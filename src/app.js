@@ -14,6 +14,7 @@
     catch { return null; }
   };
   $('#hero-name').textContent = content.name;
+  $('#hero-positioning').textContent = content.positioning;
   $('#hero-description').textContent = content.description;
   $('#about-text').textContent = content.about;
   $('#year').textContent = new Date().getFullYear();

@@ -24,7 +24,7 @@ function url(value, field, optional = false) {
   assert.ok(['https:', 'http:', 'mailto:'].includes(parsed.protocol), `${field} uses an unsupported protocol`);
 }
 
-for (const field of ['name', 'description', 'about']) text(content[field], field);
+for (const field of ['name', 'positioning', 'description', 'about']) text(content[field], field);
 for (const field of ['interests', 'projects', 'now', 'notes', 'contacts']) list(content[field], field);
 content.interests.forEach((item, i) => text(item, `interests[${i}]`));
 content.projects.forEach((item, i) => {
