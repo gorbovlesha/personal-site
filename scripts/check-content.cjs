@@ -25,18 +25,18 @@ function url(value, field, optional = false) {
 }
 
 for (const field of ['name', 'description', 'about']) text(content[field], field);
-for (const field of ['interests', 'projects', 'now', 'notes', 'contacts']) list(content[field], field);
+for (const field of ['interests', 'projects', 'skills', 'experience', 'contacts']) list(content[field], field);
 content.interests.forEach((item, i) => text(item, `interests[${i}]`));
 content.projects.forEach((item, i) => {
   for (const field of ['title', 'category', 'description', 'body']) text(item[field], `projects[${i}].${field}`);
   assert.ok(['dashboard', 'map', 'notebook'].includes(item.visual), `projects[${i}].visual is unknown`);
   url(item.url, `projects[${i}].url`, true);
 });
-content.now.forEach((item, i) => {
-  for (const field of ['icon', 'label', 'text']) text(item[field], `now[${i}].${field}`);
+content.skills.forEach((item, i) => {
+  for (const field of ['title', 'text']) text(item[field], `skills[${i}].${field}`);
 });
-content.notes.forEach((item, i) => {
-  for (const field of ['date', 'category', 'title', 'body']) text(item[field], `notes[${i}].${field}`);
+content.experience.forEach((item, i) => {
+  for (const field of ['period', 'title', 'text']) text(item[field], `experience[${i}].${field}`);
 });
 content.contacts.forEach((item, i) => {
   text(item.label, `contacts[${i}].label`);
