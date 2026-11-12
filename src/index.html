@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Личное пространство в интернете: проекты, заметки и то, что вдохновляет.">
+    <meta name="description" content="Прототип персонального сайта: обо мне, навыки, проекты, опыт и контакты.">
     <meta name="theme-color" content="#f4f3ed">
     <title>Личное пространство — персональный сайт</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23c7ed78'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='48'%3E✳%3C/text%3E%3C/svg%3E">
@@ -14,17 +14,18 @@
   <body>
     <a class="skip" href="#main">К содержимому</a>
     <header class="header wrap"><a class="wordmark" href="#" aria-label="На главную"><span class="mark">✳</span> личное пространство<span class="wordmark-dot">.</span></a>
-      <nav aria-label="Основная навигация"><a href="#about">Обо мне</a><a href="#projects">Проекты</a><a href="#notes">Заметки</a><a class="nav-contact" href="#contact">На связи <span>↗</span></a>
+      <nav aria-label="Основная навигация"><a href="#about">Обо мне</a><a href="#skills">Навыки</a><a href="#projects">Проекты</a><a href="#experience">Опыт</a><a class="nav-contact" href="#contact">Контакты <span>↗</span></a>
       </nav>
     </header>
     <main id="main" class="wrap">
+      <div class="demo-banner"><span>ПРОТОТИП</span> Все сведения — демонстрационные. Имя, навыки, проекты и опыт нужно заменить данными владельца.</div>
       <section class="hero" aria-labelledby="hero-heading">
         <div class="hero-copy">
           <div class="eyebrow"><span class="status-dot"></span> МОЙ УГОЛОК ИНТЕРНЕТА <span class="edition">/ VOL. 01</span>
           </div>
           <h1 id="hero-heading">Привет.<br>Я <span id="hero-name">Саша</span><span class="green-dot">.</span>
           </h1>
-          <p class="hero-description" id="hero-description">Делаю штуки в интернете, разбираюсь в новом и собираю впечатления за пределами экрана.</p><a class="button" href="#projects">Посмотреть, что я делаю <span>↘</span></a>
+          <p class="hero-description" id="hero-description">Пример главного сообщения: создаю понятные цифровые продукты. Здесь — мой подход, навыки и проекты.</p><a class="button" href="#projects">Посмотреть проекты <span>↘</span></a>
           <div class="hero-footnote"><span>Немного работы. Немного жизни.</span><span>Много любопытства.</span>
           </div>
         </div>
@@ -41,7 +42,6 @@
           </div><span class="sticker">Всегда<br>есть идея ↗</span>
         </div>
       </section>
-      <div class="demo-banner"><span>ПРОТОТИП</span> Имя, истории и проекты ниже — примеры для знакомства с дизайном.</div>
       <section id="about" class="about section">
         <div class="section-marker"><span>01 / ОБО МНЕ</span><span>Человек за экраном</span>
         </div>
@@ -50,36 +50,37 @@
           </h2>
           <div class="about-copy">
             <p id="about-text">Мне интересно, как устроены вещи: от небольших приложений до городов, в которых мы живём. Лучший способ разобраться для меня — попробовать сделать самому.</p>
-            <p>Этот сайт — открытая записная книжка. Здесь будут проекты, находки и мысли, которые хочется сохранить и которыми хочется поделиться.</p>
+            <p>Здесь будет короткий рассказ владельца: чем он занимается, какие задачи ему интересны и какой подход к работе он выбирает.</p>
             <div class="tags" id="interests"></div>
           </div>
         </div>
       </section>
+      <section id="skills" class="section" aria-labelledby="skills-heading">
+        <div class="section-heading">
+          <div>
+            <div class="section-marker">02 / НАВЫКИ</div>
+            <h2 id="skills-heading">Что я умею</h2>
+          </div><span class="aside-label">Примеры, без оценки уровня</span>
+        </div>
+        <ul class="skills-list" id="skill-list"></ul>
+      </section>
       <section id="projects" class="section">
         <div class="section-heading">
           <div>
-            <div class="section-marker">02 / СДЕЛАНО И В ПРОЦЕССЕ</div>
+            <div class="section-marker">03 / ПРОЕКТЫ</div>
             <h2>Маленькие идеи.<br>Настоящие проекты.</h2>
           </div><span class="aside-label">Выбранное / 01—03</span>
         </div>
         <div class="projects" id="project-list"></div>
       </section>
-      <section class="now section">
-        <div>
-          <div class="section-marker">03 / СЕЙЧАС</div>
-          <h2>В этой главе жизни</h2>
-          <p class="muted">Небольшой срез того, чем занят мой внутренний мир.</p>
-        </div>
-        <div class="now-list" id="now-list"></div>
-      </section>
-      <section id="notes" class="section">
+      <section id="experience" class="section" aria-labelledby="experience-heading">
         <div class="section-heading">
           <div>
-            <div class="section-marker">04 / ЗАПИСНАЯ КНИЖКА</div>
-            <h2>Мысли на полях</h2>
-          </div><span class="aside-label">Без строгого расписания</span>
+            <div class="section-marker">04 / ОПЫТ</div>
+            <h2 id="experience-heading">Путь и практика</h2>
+          </div><span class="aside-label">Демонстрационная структура</span>
         </div>
-        <div id="note-list" class="note-list"></div>
+        <ol class="experience-list" id="experience-list"></ol>
       </section>
       <section id="contact" class="contact">
         <div>

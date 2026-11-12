@@ -49,24 +49,17 @@
     card.addEventListener('click', () => openDetail(project, 'ПРИМЕР ПРОЕКТА / 0' + (index + 1)));
     $('#project-list').append(card);
   });
-  content.now.forEach((item) => {
-    const row = element('div', 'now-item');
-    const icon = element('span', 'now-icon', item.icon);
-    icon.setAttribute('aria-hidden', 'true');
-    const text = element('div');
-    text.append(element('small', '', item.label), element('p', '', item.text));
-    row.append(icon, text);
-    $('#now-list').append(row);
+  content.skills.forEach((skill) => {
+    const item = element('li', 'skill-card');
+    item.append(element('h3', '', skill.title), element('p', '', skill.text));
+    $('#skill-list').append(item);
   });
-  content.notes.forEach((note) => {
-    const row = element('button', 'note-row');
-    row.type = 'button';
-    row.setAttribute('aria-haspopup', 'dialog');
-    const arrow = element('span', 'note-arrow', '↗');
-    arrow.setAttribute('aria-hidden', 'true');
-    row.append(element('span', 'note-date', note.date), element('span', 'note-title', note.title), element('span', 'note-category', note.category), arrow);
-    row.addEventListener('click', () => openDetail(note, 'ДЕМОНСТРАЦИОННАЯ ЗАМЕТКА / ' + note.category.toUpperCase()));
-    $('#note-list').append(row);
+  content.experience.forEach((entry) => {
+    const item = element('li', 'experience-item');
+    const details = element('div');
+    details.append(element('h3', '', entry.title), element('p', '', entry.text));
+    item.append(element('p', 'experience-period', entry.period), details);
+    $('#experience-list').append(item);
   });
   const contacts = content.contacts.filter((contact) => safeUrl(contact.url));
   if (contacts.length) {
