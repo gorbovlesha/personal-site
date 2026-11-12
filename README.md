@@ -23,7 +23,7 @@ python3 scripts/project.py dev
 | `python3 scripts/project.py dev` | Локально обслуживать исходники из `src/` |
 | `python3 scripts/project.py check` | Проверить структуру, локальные ссылки и JS при наличии Node.js |
 | `python3 scripts/project.py check --require-node` | Полная проверка; отсутствие Node.js считается ошибкой |
-| `python3 scripts/project.py test` | Регрессионные тесты сборки и проверки путей |
+| `python3 scripts/project.py test` | Регрессионные тесты сборки, путей и поведения навигации |
 | `python3 scripts/project.py build` | Проверить исходники и пересоздать `dist/` |
 | `python3 scripts/project.py build --require-node` | То же, с обязательной проверкой JS |
 | `python3 scripts/project.py preview` | Локально посмотреть готовый `dist/` |
@@ -37,6 +37,7 @@ src/                        Исходники сайта
   index.html                Разметка и метаданные
   styles.css                Дизайн и адаптивная вёрстка
   content.js                Данные профиля, проектов и заметок
+  navigation.js             Адаптивное меню и управление фокусом
   app.js                    Рендеринг, ссылки и диалоги
 automation/                 Серверные роли и очередь Trello
 scripts/                    Команды разработки и проверки

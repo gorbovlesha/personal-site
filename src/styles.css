@@ -40,7 +40,7 @@ button,a {
   -webkit-tap-highlight-color: transparent;
 }
 
-button: focus-visible,a:focus-visible {
+:focus-visible {
   outline: 3px solid #668d2b;
   outline-offset: 5px;
 }
@@ -146,6 +146,46 @@ h1 {
 
 .green-dot {
   color: #82a84b;
+}
+
+.hero-positioning {
+  font-size: 20px;
+  line-height: 1.4;
+  max-width: 420px;
+  margin: 0 0 14px;
+}
+
+.hero-copy, .hero-art {
+  min-width: 0;
+}
+
+#hero-name, .hero-positioning, .hero-description {
+  overflow-wrap: anywhere;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button.button-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.button.button-secondary:hover {
+  background: var(--lime);
+}
+
+.menu-toggle {
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid var(--ink);
+  border-radius: 24px;
+  color: var(--ink);
+  background: transparent;
 }
 
 .hero-description {
@@ -838,7 +878,7 @@ dialog {
   box-shadow: 0 25px 100px #0003;
 }
 
-dialog: :backdrop {
+dialog::backdrop {
   background: #242b2566;
   backdrop-filter: blur(5px);
 }
@@ -964,6 +1004,22 @@ dialog h2 {
     justify-content: space-between;
     gap: 10px;
     font-size: 12px;
+  }
+  .header nav {
+    flex-wrap: wrap;
+  }
+  .header nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .header.nav-ready nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+  .header.nav-ready nav a {
+    padding: 10px 12px;
   }
   .nav-contact {
     border: 0;
