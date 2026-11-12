@@ -41,18 +41,35 @@
           </div><span class="sticker">Всегда<br>есть идея ↗</span>
         </div>
       </section>
-      <div class="demo-banner"><span>ПРОТОТИП</span> Имя, истории и проекты ниже — примеры для знакомства с дизайном.</div>
-      <section id="about" class="about section">
+      <div class="demo-banner"><span>ПРОТОТИП</span> Имя, специализация, стек, опыт, истории и проекты ниже — примеры для знакомства с дизайном.</div>
+      <section id="about" class="about section" aria-labelledby="about-heading">
         <div class="section-marker"><span>01 / ОБО МНЕ</span><span>Человек за экраном</span>
         </div>
         <div class="about-grid">
-          <h2>Люблю, когда<br>из «а что, если»<br>получается <em>что-то.</em>
+          <h2 id="about-heading">Люблю, когда<br>из «а что, если»<br>получается <em>что-то.</em>
           </h2>
           <div class="about-copy">
             <p id="about-text">Мне интересно, как устроены вещи: от небольших приложений до городов, в которых мы живём. Лучший способ разобраться для меня — попробовать сделать самому.</p>
             <p>Этот сайт — открытая записная книжка. Здесь будут проекты, находки и мысли, которые хочется сохранить и которыми хочется поделиться.</p>
             <div class="tags" id="interests"></div>
           </div>
+        </div>
+        <div class="professional">
+          <p class="professional-notice">Демонстрационный профиль: специализация, технологии и опыт ниже — мок. Реальные данные владельца будут добавлены позже.</p>
+          <div class="professional-grid">
+            <div class="professional-profile">
+              <h3>Специализация</h3>
+              <p class="specialization" id="specialization"></p>
+              <p id="professional-summary"></p>
+              <h3 id="stack-heading">Стек</h3>
+              <ul class="tags stack-list" id="stack-list" aria-labelledby="stack-heading"></ul>
+            </div>
+            <div>
+              <h3 id="experience-heading">Опыт</h3>
+              <ol class="experience-list" id="experience-list" aria-labelledby="experience-heading"></ol>
+            </div>
+          </div>
+          <noscript><p>Чтобы увидеть демонстрационные специализацию, стек и опыт, включите JavaScript.</p></noscript>
         </div>
       </section>
       <section id="projects" class="section">

@@ -18,6 +18,20 @@
   $('#about-text').textContent = content.about;
   $('#year').textContent = new Date().getFullYear();
   content.interests.forEach((interest) => $('#interests').append(element('span', '', interest)));
+  const professional = content.professional;
+  $('#specialization').textContent = professional.specialization;
+  $('#professional-summary').textContent = professional.summary;
+  professional.stack.forEach((technology) => $('#stack-list').append(element('li', '', technology)));
+  professional.experience.forEach((experience) => {
+    const item = element('li', 'experience-item');
+    item.append(
+      element('p', 'experience-period', experience.period),
+      element('h4', '', experience.role),
+      element('p', 'experience-context', experience.context),
+      element('p', '', experience.description)
+    );
+    $('#experience-list').append(item);
+  });
   const dialog = $('#detail-dialog');
   function openDetail(item, label) {
     $('#dialog-title').textContent = item.title;

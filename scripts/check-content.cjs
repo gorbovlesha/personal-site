@@ -27,6 +27,13 @@ function url(value, field, optional = false) {
 for (const field of ['name', 'description', 'about']) text(content[field], field);
 for (const field of ['interests', 'projects', 'now', 'notes', 'contacts']) list(content[field], field);
 content.interests.forEach((item, i) => text(item, `interests[${i}]`));
+assert.ok(content.professional && typeof content.professional === 'object', 'professional is required');
+for (const field of ['specialization', 'summary']) text(content.professional[field], `professional.${field}`);
+for (const field of ['stack', 'experience']) list(content.professional[field], `professional.${field}`);
+content.professional.stack.forEach((item, i) => text(item, `professional.stack[${i}]`));
+content.professional.experience.forEach((item, i) => {
+  for (const field of ['role', 'context', 'period', 'description']) text(item[field], `professional.experience[${i}].${field}`);
+});
 content.projects.forEach((item, i) => {
   for (const field of ['title', 'category', 'description', 'body']) text(item[field], `projects[${i}].${field}`);
   assert.ok(['dashboard', 'map', 'notebook'].includes(item.visual), `projects[${i}].visual is unknown`);
